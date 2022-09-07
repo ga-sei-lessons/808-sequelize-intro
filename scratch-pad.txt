@@ -1,0 +1,10 @@
+table: users
+------------------
+firstName: TEXT
+lastName: TEXT
+age: INT
+email: TEXT
+
+NOTE: generate models with a SINGULAR name (no s on the end)
+
+sequelize model:create --name user --attributes firstName:string,lastName:string,age:integer,email:string
