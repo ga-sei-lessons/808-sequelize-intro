@@ -8,3 +8,44 @@ email: TEXT
 NOTE: generate models with a SINGULAR name (no s on the end)
 
 sequelize model:create --name user --attributes firstName:string,lastName:string,age:integer,email:string
+
+database can have one or many tables, one table has many columns
+one row in a table is called a record
+
+parent/child relationship
+-- parent owns the child, but the child that holds the reference to the parent
+
+one class has many students
+table Class:
+- id
+- name
+- instructor
+- topic
+- dates
+- student id
+
+table Students:
+- id
+- name
+- enrolled
+- email address
+- classId (foreign key - references primary key from another table)
+
+one team would have many players
+
+
+DATABASE GUIDELINES:
+- lowercase (no camelCasing)
+- singular
+- underscores, not dashes 
+
+sequelize model:create --name pet --attributes name:string,species:string,description:text,userId:integer
+
+
+one to one, uncommon, EX state to capital
+
+
+ERD ARROW NOTATION (crows feet)
+one:many 
+1:M
+circle:crows foot
