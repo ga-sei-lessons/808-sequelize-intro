@@ -49,3 +49,19 @@ ERD ARROW NOTATION (crows feet)
 one:many 
 1:M
 circle:crows foot
+
+TABLE: toys
+----------
+type: VARCHAR
+color: VARCHAR
+
+sequelize model:create --name toy --attributes type:string,color:string 
+
+JOIN TABLE: pets_toys
+---------------------
+FK: petId: INT
+FK: toyId: INT
+
+NOTE: join table names should plural
+
+sequelize model:create --name pets_toys --attributes petId:integer,toyId:integer
